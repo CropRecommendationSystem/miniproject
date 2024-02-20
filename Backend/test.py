@@ -17,7 +17,7 @@ input_data = json.loads(input_data_json)
 # print(input_data)
 
 # Load the trained model from the pickle file
-clf = joblib.load('C:/Users/DELL/Desktop/mini project/miniproject/Backend/decision_tree_model.pkl')
+clf = joblib.load('decision_tree_model.pkl')
 
 # Convert input dictionary to Pandas DataFrame
 new_data  = pd.DataFrame.from_dict(input_data, orient='index').transpose()
