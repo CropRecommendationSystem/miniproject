@@ -6,7 +6,7 @@ import json
 # Read input data from stdin
 input_data_json = sys.stdin.read()
 
-print("hi")
+
 
 # Parse input data from JSON string to Python dictionary
 input_data = json.loads(input_data_json)

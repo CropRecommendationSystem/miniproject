@@ -26,9 +26,9 @@ module.exports.Predict = async (req, res, next) => {
 
     // Handle Python script exit
     pythonProcess.on('close', async (code) => {
-        if (code !== 0) {
-            return res.status(500).send('Python script encountered an error.');
-        }
+        // if (code !== 0) {
+        //     return res.status(500).send('Python script encountered an error.');
+        // }
         try {
             // Parse the output data to get the predicted crop name
             const predictionData = JSON.parse(outputData);
