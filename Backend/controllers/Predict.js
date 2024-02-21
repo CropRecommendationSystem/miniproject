@@ -10,7 +10,7 @@ module.exports.Predict = async (req, res, next) => {
     const inputDataJson = JSON.stringify(inputData);
 
     // Spawn a Python process
-    const pythonProcess = spawn('python', ['C:/Users/DELL/Desktop/mini project/miniproject/Backend/test.py']);
+    const pythonProcess = spawn('python', ['test.py']);
 
     // Send input data to the Python script via stdin
     pythonProcess.stdin.write(inputDataJson);
