@@ -4,7 +4,7 @@ const Crop = require('../Models/crop.js');
 module.exports.Predict = async (req, res, next) => {
     const inputData = req.body;
     
-    console.log(inputData);
+    console.log("predict",inputData);
 
     // Serialize input data to JSON string
     const inputDataJson = JSON.stringify(inputData);
@@ -39,6 +39,7 @@ module.exports.Predict = async (req, res, next) => {
 
             // Retrieve crop details from the database
             const cropDetails = await getCropDetailsByName(cropName);
+            console.log(cropDetails);
 
             // Send predictions back to the client along with crop details
             res.json({ prediction: cropName, cropDetails });
